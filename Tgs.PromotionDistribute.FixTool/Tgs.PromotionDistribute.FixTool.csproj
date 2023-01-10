@@ -4,8 +4,13 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>Togs.PayromotionDessiistriuibute.FixTool</RootNamespace>
+    <RootNamespace>Tgs.PromotionDistribute.FixTool</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Tgs.MessageQueue.Nats" Version="2.1.7" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FixTool.Core\FixTool.Core.csproj" />
