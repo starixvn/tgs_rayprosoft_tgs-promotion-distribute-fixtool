@@ -6,7 +6,9 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddFixToolCore(
         this IServiceCollection services)
-        => _ = services.RegisterAllServiceUtilityTypes(
-            Assembly.GetExecutingAssembly(),
-            ServiceLifetime.Transient);
+        => _ = services
+	        .RegisterAllServiceUtilityTypes(
+		        Assembly.GetExecutingAssembly(),
+		        ServiceLifetime.Transient)
+	        .AddSerialNumberGenerator();
 }

@@ -8,10 +8,8 @@ builder.Configuration
     .AddEnvironmentVariables();
 
 builder.Services
-    .AddFixToolRepository((sp, dbOptions) =>
-    {
-        _ = dbOptions.UseNpgsql(builder.Configuration.GetConnectionString("Tgs"));
-    })
+    .AddFixToolRepository((sp, dbOptions) 
+	    => _ = dbOptions.UseNpgsql(builder.Configuration.GetConnectionString("Tgs")))
     .AddFixToolCore()
     .AddCashServiceClient((options, sp) =>
     {

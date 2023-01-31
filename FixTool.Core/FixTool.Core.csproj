@@ -10,15 +10,11 @@
   <ItemGroup>
     <PackageReference Include="JsonPatch.Net" Version="2.0.4" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
-    <PackageReference Include="Tgs.CashService.Client" Version="0.1.5" />
+    <PackageReference Include="Tgs.CashService.Client" Version="0.1.6" />
     <PackageReference Include="Tgs.PlayerBucket.Client" Version="0.0.8" />
     <PackageReference Include="Tgs.PlayerService.Client" Version="0.0.27" />
     <PackageReference Include="Tgs.SerialNumberGenerator" Version="1.0.0" />
     <PackageReference Include="TGS.ServiceUtility" Version="0.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ApplicationServices\" />
   </ItemGroup>
 
 </Project>
