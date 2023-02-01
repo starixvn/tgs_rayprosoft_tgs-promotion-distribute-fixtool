@@ -9,7 +9,7 @@ namespace Tgs.PromotionDistribute.FixTool.Controllers;
 [ApiController]
 public class PromotionDistributeController : ControllerBase
 {
-    [HttpPost("/manual/{distributeId}")]
+    [HttpPost("manual/{distributeId}")]
     public async ValueTask<DistributeResultViewModel?> ManualDistributeBonusByIdAsync(
         [FromServices] IGetService<ManualDistributeBonusByIdQuery, DistributeResult?> getService,
         Guid distributeId)
