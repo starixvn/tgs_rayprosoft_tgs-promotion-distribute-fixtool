@@ -7,6 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 ARG BuildConfiguration=Release
 WORKDIR /src
+COPY ["nuget.config", "."]
 COPY ["Tgs.PromotionDistribute.FixTool/Tgs.PromotionDistribute.FixTool.csproj", "Tgs.PromotionDistribute.FixTool/"]
 COPY ["FixTool.Core/FixTool.Core.csproj", "FixTool.Core/"]
 COPY ["FixTool.Repository/FixTool.Repository.csproj", "FixTool.Repository/"]
