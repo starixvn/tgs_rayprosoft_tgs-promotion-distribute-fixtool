@@ -48,6 +48,7 @@ Selector labels
 {{- define "promotion-distribute-fixtool.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "promotion-distribute-fixtool.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+tgs.kind: promotion
 {{- end }}
 
 {{/*
