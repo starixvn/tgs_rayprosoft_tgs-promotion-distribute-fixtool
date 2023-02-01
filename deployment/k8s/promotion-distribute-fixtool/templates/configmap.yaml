@@ -42,5 +42,5 @@ data:
           exporters: [otlp]
         metrics:
           receivers: [otlp]
-          exports: [prometheus]
+          exporters: [prometheus]
     
