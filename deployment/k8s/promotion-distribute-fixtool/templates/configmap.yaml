@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: configmap-{{ include "promotion-distribuite-fixtool.fullname" . }}
+  name: configmap-{{ include "promotion-distribute-fixtool.fullname" . }}
 data:
   appsetting.json: | 
     {  
