@@ -74,6 +74,51 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
         - name: monitor
           image: otel/opentelemetry-collector:0.70.0
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - --config=/etc/otel/config.yaml
+          env:
+            - name: NODE_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+          ports:
+            - name: metrics
+              containerPort: 8889
+              protocol: TCP
+            - name: health
+              containerPort: 13133
+              protocol: TCP
+            - name: otlp
+              containerPort: 4317
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /etc/otel/config.yaml
+              name: appsettings
+              readOnly: true
+              subPath: otel-collector-config.yaml 
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: health
+            periodSeconds: 2
+            failureThreshold: 30
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: health
+            periodSeconds: 5
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+      volumes:
+        - name: appsettings
+          configMap:
+            name: configmap-{{ include "promotion-distribuite-fixtool.fullname" . }}  
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
