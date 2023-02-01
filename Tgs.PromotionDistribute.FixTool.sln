@@ -5,9 +5,11 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tgs.PromotionDistribute.FixTool", "Tgs.PromotionDistribute.FixTool\Tgs.PromotionDistribute.FixTool.csproj", "{C2D5B78E-26B5-49D2-A5EE-77FB4D1D7823}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixTool.Core", "FixTool.Core\FixTool.Core.csproj", "{C50D262D-FE18-463D-92FD-E9216C1786EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixTool.Core", "FixTool.Core\FixTool.Core.csproj", "{C50D262D-FE18-463D-92FD-E9216C1786EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixTool.Repository", "FixTool.Repository\FixTool.Repository.csproj", "{E0CEBDAD-1E08-4B82-8A0F-25C80EFB1315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FixTool.Repository", "FixTool.Repository\FixTool.Repository.csproj", "{E0CEBDAD-1E08-4B82-8A0F-25C80EFB1315}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixTool.Core.UnitTests", "FixTool.Core.UnitTests\FixTool.Core.UnitTests.csproj", "{9963AF27-8EE6-474A-A41A-DC3FBB8DA8D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E0CEBDAD-1E08-4B82-8A0F-25C80EFB1315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0CEBDAD-1E08-4B82-8A0F-25C80EFB1315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0CEBDAD-1E08-4B82-8A0F-25C80EFB1315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9963AF27-8EE6-474A-A41A-DC3FBB8DA8D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9963AF27-8EE6-474A-A41A-DC3FBB8DA8D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9963AF27-8EE6-474A-A41A-DC3FBB8DA8D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9963AF27-8EE6-474A-A41A-DC3FBB8DA8D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
