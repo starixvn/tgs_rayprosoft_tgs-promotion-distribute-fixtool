@@ -45,7 +45,7 @@ spec:
                 secretKeyRef:
                   name: tgs-connections
                   key: tgs
-            - name: ConnectionStrings_Nats
+            - name: ConnectionStrings__Nats
               valueFrom:
                 secretKeyRef:
                   name: tgs-connections
@@ -96,7 +96,7 @@ spec:
             - mountPath: /etc/otel/config.yaml
               name: appsettings
               readOnly: true
-              subPath: otel-collector-config.yaml 
+              subPath: otel-collector-config.yaml
           startupProbe:
             httpGet:
               path: /healthz
