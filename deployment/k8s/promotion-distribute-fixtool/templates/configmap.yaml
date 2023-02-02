@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: configmap-{{ include "promotion-distribute-fixtool.fullname" . }}
 data:
-  appsetting.json: | 
+  appsettings.json: | 
     {  
       "FixTool": {
         "CashBaseUrl": "http://cashservice-api",
